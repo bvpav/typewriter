@@ -13,7 +13,7 @@
     "build": "tsc && webpack && cp src/*.svelte lib/",
     "start": "webpack serve --config webpack.dev.config.js",
     "dev": "tsc --watch",
-    "prepublishOnly": "npm run build",
+    "preinstall": "npm run build",
     "test": "TS_NODE_PROJECT=test/tsconfig.json mocha",
     "tdd": "TS_NODE_PROJECT=test/tsconfig.json mocha -w --reporter progress"
   },
@@ -32,11 +32,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/typewriter-editor/typewriter.git"
+    "url": "https://github.com/bvpav/typewriter.git"
   },
   "dependencies": {
     "@popperjs/core": "^2.6.0",
-    "fast-diff": "^1.2.0"
+    "fast-diff": "git+https://github.com/bvpav/fast-diff"
   },
   "peerDependencies": {
     "svelte": "3.x"
